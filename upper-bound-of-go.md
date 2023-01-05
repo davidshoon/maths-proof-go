@@ -28,7 +28,7 @@ In our case, the big-Oh notation for the upper bound is: O(1.717925069×10⁴⁷
 
 This upper bound is significantly smaller than the simpler calculation of the upper bound: 3^(19x19) = 1.7409×10¹⁷², by a factor of 10^125.
 
-So, it's not as big as the number of atoms in the universe, but it's bigger than 128-bit encryption.
+That is, it's only somewhat bigger than 128-bit encryption.
 
 I would have published this as a "white paper" back in 2009, but the idea of "divide and conquer" (aka merge sort), and its application on what is "obviously" a symmetric board, is so trivial, I felt too ashamed. In fact, I still don't want to be associated with discovering a new upper bound for a God's algorithm on Go.
 
