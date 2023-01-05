@@ -10,23 +10,23 @@ The problem of "Go" (the board game) can be reduced:
 
 Thus, the calculation is:
 
-3^(number of grids) + edges of quadrant that connects to other quadrants (i.e. 1/2 the perimeter, or the two connecting edges of the quadrant).
+3^(number of grids) + edges of quadrant that connects to other quadrants (i.e. 1/2 the perimeter, or the two connecting edges of the quadrant). The justification is to ensure that these reduced quadrant solutions "local solutions" are still optimal when merged back into a "bigger/global" solution.
 
 e.g.
 
-smallest quadrant: 3^(3x3) * (3 + 3) = 118098
+smallest quadrant: 3^(3x3) * 3^(3 + 3) = 14348907
 
-next biggest quadrant: 3^(5x5) * (5 + 5) = 8472886094430
+next biggest quadrant: 3^(5x5) * 3^(5 + 5) = 5.00315451×10¹⁶
 
-our final quadrants: 3^(9x9) * (9 + 9) = 7981676788374679859068493351144698070454 = 7.9817×10³⁹
+our final quadrants: 3^(9x9) * 3^(9 + 9) = 1.717925069×10⁴⁷
 
 The sum of these numbers is the number of upper bound of Go positions required to be calculated, such that an "optimal God algorithm" can exist.
 
 The approach given here is the same as "merge sort" (in computer science), or Fast Fourier Transform, or any other "divide and conquer" algorithm where you need to "recursively divide, calculate, and then merge back". This is often typically O(nlog(n)).
 
-In our case, the big-Oh notation for the upper bound is: O(7.9817×10³⁹) or O(2^132) or 132 bits.
+In our case, the big-Oh notation for the upper bound is: O(1.717925069×10⁴⁷) or O(2^156) or 156 bits.
 
-This upper bound is significantly smaller than the simpler calculation of the upper bound: 3^(19x19) = 1.7409×10¹⁷², by a factor of 10^133.
+This upper bound is significantly smaller than the simpler calculation of the upper bound: 3^(19x19) = 1.7409×10¹⁷², by a factor of 10^125.
 
 So, it's not as big as the number of atoms in the universe, but it's bigger than 128-bit encryption.
 
