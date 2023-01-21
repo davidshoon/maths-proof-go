@@ -16,10 +16,13 @@ i.e. the optimal (minima) area:perimeter ratio is 4:1 (i.e. a square).
 You'll see this in a Go game, where if you try to surround one stone, it takes 4 stones.
 
 
+```
+
   O
 O x O
   O
-  
+
+```
   
 Therefore, it will always be a 1st player win game, because the first player has the advantage of 4 stones to 1. 
 
@@ -33,9 +36,13 @@ This means justifying the Komi depends on the average area of stones captured.
 
 Given two eyes is the minimal secured area:
 
+```
+
 O O O O O 
 O X O X O   
 O O O O O
+
+```
 
 Therefore, the Komi is 13:2 = 6.5.
 
